@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>كورس المراجعة النهائية - د\كيرلس ثروت</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+        <script src="course.js" defer></script>
+    </head>
+
+    <body>
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="logo.jpeg" alt="د. كيرو" width="64" height="64">
+                <span>Dr. Kero</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="courses-page.html" class="nav-link">الكورسات</a>
+                <a href="contact.html" class="nav-link">اتصل بنا</a>
+            </div>
+        </nav>
+
+        <main class="course-content">
+            <!-- قسم الفيديو -->
+            <div class="video-section">
+                <div id="videoNumber" class="video-number">فيديو رقم: <span>1</span></div>
+                <div id="videoContainer" class="video-container">
+                    <video id="videoPlayer" controls>
+                        <source src="" type="video/mp4">
+                        متصفحك لا يدعم تشغيل الفيديو
+                    </video>
+                </div>
+            </div>
+
+            <!-- قائمتين منسدلتين -->
+            <div class="dropdowns-container">
+                <!-- قائمة محتوى الكورس -->
+                <div class="dropdown dark-theme">
+                    <button class="dropdown-btn" onclick="toggleDropdown('courseContent')">
+                        الفيديوهات التعليمية
+                        <i class="arrow"></i>
+                    </button>
+                    <div id="courseContent" class="dropdown-content">
+                        <a href="vidio/التفاعل وتركيب لويس النقطي.mp4" class="lesson" onclick="playVideo(event, this)"
+                            data-number="1">
+                            <span class="lesson-title">١) مراجعة شرح الدرس الاول والثاني الباب الثالث</span>
+                        </a>
+                        <a href="vidio/2.mp4" class="lesson" onclick="playVideo(event, this)" data-number="2">
+                            <span class="lesson-title">١) حل علي الدرس الاول والثاني الباب الثالث</span>
+                        </a>
+                        <a href="vidio/3.mp4" class="lesson" onclick="playVideo(event, this)" data-number="3">
+                            <span class="lesson-title">٢) مراجعة شرح الدرس الثالث والرابع الباب الثالث</span>
+                        </a>
+                        <a href="vidio/4.mp4" class="lesson" onclick="playVideo(event, this)" data-number="4">
+                            <span class="lesson-title">٢) حل علي الدرس الثالث والرابع الباب الثالث</span>
+                        </a>
+                        <a href="vidio/5.mp4" class="lesson" onclick="playVideo(event, this)" data-number="5">
+                            <span class="lesson-title">٣) مراجعة شرح الدرس الاول الباب الرابع</span>
+                        </a>
+                        <a href="vidio/6.mp4" class="lesson" onclick="playVideo(event, this)" data-number="6">
+                            <span class="lesson-title">٣) حل علي الدرس الاول الباب الرابع</span>
+                        </a>
+                        <a href="vidio/7.mp4" class="lesson" onclick="playVideo(event, this)" data-number="7">
+                            <span class="lesson-title">٤) مراجعة شرح الدرس الثاني الباب الرابع</span>
+                        </a>
+                        <a href="vidio/8.mp4" class="lesson" onclick="playVideo(event, this)" data-number="8">
+                            <span class="lesson-title">٤) حل علي الدرس الثاني الباب الرابع</span>
+                        </a>
+                        <a href="vidio/9.mp4" class="lesson" onclick="playVideo(event, this)" data-number="9">
+                            <span class="lesson-title">٥) فيديو ١ حل اهم الامتحانات الشاملة علي المنهج</span>
+                        </a>
+                        <a href="vidio/10.mp4" class="lesson" onclick="playVideo(event, this)" data-number="10">
+                            <span class="lesson-title">٥) فيديو ٢ حل اهم الامتحانات الشاملة علي المنهج</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- قائمة ملحقات الكورس -->
+                <div class="dropdown dark-theme">
+                    <button class="dropdown-btn" onclick="toggleDropdown('courseMaterials')">
+                        المذكرات والملخصات
+                        <i class="arrow"></i>
+                    </button>
+                    <div id="courseMaterials" class="dropdown-content">
+                        <div class="materials-grid">
+                            <a href="materials/memorandum1.pdf" class="material-item">
+                                <i class="material-icon pdf"></i>
+                                <span>مذكرة الباب الثالث - الجزء الأول</span>
+                            </a>
+                            <a href="materials/memorandum2.pdf" class="material-item">
+                                <i class="material-icon pdf"></i>
+                                <span>مذكرة الباب الثالث - الجزء الثاني</span>
+                            </a>
+                            <a href="materials/memorandum3.pdf" class="material-item">
+                                <i class="material-icon pdf"></i>
+                                <span>مذكرة الباب الرابع - الجزء الأول</span>
+                            </a>
+                            <a href="materials/memorandum4.pdf" class="material-item">
+                                <i class="material-icon pdf"></i>
+                                <span>مذكرة الباب الرابع - الجزء الثاني</span>
+                            </a>
+                            <a href="materials/final-revision.pdf" class="material-item">
+                                <i class="material-icon pdf"></i>
+                                <span>المراجعة النهائية الشاملة</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <div id="videoModal" class="modal">
+
+        </div>
+
+        <footer>
+            <div class="container">
+                <p>د\كيرلس ثروت</p>
+                <p>الكيمياء و العلوم المتكاملة</p>
+                <p>💪🔥 You Can Be A Hero With Dr. Kero 💪🔥</p>
+                <p>اضمن الدرجة النهائية</p>
+                <p>برمجة وتصميم سامي أحمد</p>
+            </div>
+        </footer>
+
+        <script>
+            // إضافة التحقق من تسجيل الدخول في بداية الملف
+            window.onload = function () {
+                if (!localStorage.getItem('isLoggedIn')) {
+                    window.location.href = 'course-login.html';
+                    return;
+                }
+            }
+            // تحديث وظيفة تبديل القوائم المنسدلة
+            function toggleDropdown(targetId) {
+                const content = document.getElementById(targetId);
+                const button = content.previousElementSibling;
+                const arrow = button.querySelector('.arrow');
+
+                // إغلاق كل القوائم الأخرى
+                document.querySelectorAll('.dropdown-content').forEach(dropContent => {
+                    if (dropContent.id !== targetId && dropContent.classList.contains('show')) {
+                        dropContent.classList.remove('show');
+                        dropContent.previousElementSibling.querySelector('.arrow').classList.remove('up');
+                    }
+                });
+
+                // تبديل حالة القائمة المحددة
+                content.classList.toggle('show');
+                arrow.classList.toggle('up');
+            }
+
+            // إغلاق القوائم عند النقر خارجها
+            window.addEventListener('click', function (e) {
+                if (!e.target.matches('.dropdown-btn') && !e.target.matches('.arrow')) {
+                    document.querySelectorAll('.dropdown-content').forEach(content => {
+                        if (content.classList.contains('show')) {
+                            content.classList.remove('show');
+                            content.previousElementSibling.querySelector('.arrow').classList.remove('up');
+                        }
+                    });
+                }
+            });
+
+            function playVideo(event, element) {
+                event.preventDefault();
+                const videoPlayer = document.getElementById('videoPlayer');
+                const videoSource = element.getAttribute('href');
+                const videoNumber = element.getAttribute('data-number');
+
+                // تحديث رقم الفيديو
+                document.querySelector('#videoNumber span').textContent = videoNumber;
+
+                videoPlayer.src = videoSource;
+                videoPlayer.play();
+
+                document.querySelectorAll('.lesson').forEach(lesson => {
+                    lesson.classList.remove('active');
+                });
+                element.classList.add('active');
+
+                videoPlayer.scrollIntoView({ behavior: 'smooth' });
+            }
+
+            // تهيئة الأزرار
+            document.querySelectorAll('.dropdown-btn').forEach(button => {
+                button.addEventListener('click', function () {
+                    const dropdownId = this.getAttribute('data-dropdown');
+                    const content = document.getElementById(dropdownId);
+
+                    // إغلاق جميع القوائم الأخرى
+                    document.querySelectorAll('.dropdown-content').forEach(item => {
+                        if (item.id !== dropdownId) {
+                            item.classList.remove('show');
+                            item.style.maxHeight = null;
+                        }
+                    });
+
+                    // تبديل حالة القائمة الحالية
+                    content.classList.toggle('show');
+                    if (content.classList.contains('show')) {
+                        content.style.maxHeight = content.scrollHeight + "px";
+                        this.querySelector('.arrow').classList.add('up');
+                    } else {
+                        content.style.maxHeight = null;
+                        this.querySelector('.arrow').classList.remove('up');
+                    }
+                });
+            });
+
+            // إغلاق القوائم عند النقر خارجها
+            document.addEventListener('click', function (event) {
+                if (!event.target.closest('.dropdown')) {
+                    document.querySelectorAll('.dropdown-content').forEach(content => {
+                        content.classList.remove('show');
+                        content.style.maxHeight = null;
+                    });
+                    document.querySelectorAll('.arrow').forEach(arrow => {
+                        arrow.classList.remove('up');
+                    });
+                }
+            });
+        </script>
+    </body>
+
+</html>

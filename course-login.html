@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <title>تسجيل الدخول للكورس - د\كيرلس ثروت</title>
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <nav class="main-nav">
+            <div class="logo">
+                <img src="logo.jpeg" alt="د. كيرو" width="64" height="64">
+                <span>Dr. Kero</span>
+            </div>
+            <div class="nav-links">
+                <a href="courses-page.html" class="nav-link">العودة للكورسات</a>
+                <a href="index.html" class="nav-link">الرئيسية</a>
+                <a href="contact.html" class="nav-link">اتصل بنا</a>
+            </div>
+        </nav>
+
+        <main>
+            <div class="login-container">
+                <h2>تسجيل الدخول للكورس</h2>
+                <form class="course-login-form" onsubmit="return validateCode(event)">
+                    <input type="text" id="courseCode" placeholder="ادخل كود الكورس" required>
+                    <button type="submit">دخول</button>
+                </form>
+            </div>
+        </main>
+
+        <script>
+            function validateCode(event) {
+                event.preventDefault();
+                const code = document.getElementById('courseCode').value;
+                const validCode = "drkirolostharwat852654";
+
+                if (code === validCode) {
+                    localStorage.setItem('isLoggedIn', 'true');
+                    window.location.href = 'basics-course.html';
+                } else {
+                    alert('كود غير صحيح');
+                }
+                return false;
+            }
+        </script>
+    </body>
+
+</html>
